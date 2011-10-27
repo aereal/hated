@@ -4,7 +4,8 @@ Hated.controllers do
 		render :index
 	end
 
-	get :day do
+	get :day, map: '/:date' do
+		@sections = Section.all(created_on: Date.parse(params[:date]))
 	end
 
 	get :section do
