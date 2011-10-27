@@ -7,5 +7,10 @@ class Section
 	property :body, Text
 	property :created_at, DateTime
 	property :created_on, Date
+
+	# associations
 	has n, :categories, through: Resource
+
+	# default scopes
+	default_scope(:default).update(order: [:created_at.desc])
 end
