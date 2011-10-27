@@ -11,7 +11,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 # Component requirements
 gem 'sass'
 gem 'slim'
-gem 'dm-sqlite-adapter'
+gem 'dm-yaml-adapter'
 gem 'dm-validations'
 gem 'dm-timestamps'
 gem 'dm-migrations'
