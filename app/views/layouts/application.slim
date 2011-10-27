@@ -1,0 +1,43 @@
+doctype strict
+html
+  head
+    meta{http-equiv='Content-Type' content='text/html;charset=utf-8'}
+    meta{http-equiv='Content-Style-Type' content='text/css'}
+    meta{http-equiv='Content-Script-Type' content='text/javascript'}
+    link{rel='stylesheet' type='text/css' href="/styles/#{@theme}.css"}
+    title =[@page_title, options.site_title].compact.join(options.title_delimiter)
+  body
+    - if options.header
+      #simple-header
+        a{href='http://www.hatena.ne.jp/'}
+          img#logo-hatena{src='/images/hatena-simple_bl.gif'
+            alt='Hatena::' title='Hatena::' width=65 height=17}
+        a{href='http://d.hatena.ne.jp/'}
+          img#logo-diary{src='/images/diary-simple_bl.gif' alt='ブログ(Diary)' title='Diary' width=43 height=17}
+        form.search-form{method='get' action='/#search'}
+          input{type='hidden' name='name'}
+          input.search-word{type='text' name='word' value=''}
+          input.search-button{type='submit' name='diary' value='日記'}
+          input.search-button{type='submit' name='submit' value='検索'}
+        ul.menu
+          li
+            a{href='/'} ブログトップ
+            a{href='/archive'} 記事一覧
+            a{href='http://hatenadiary.g.hatena.ne.jp'} ヘルプ
+
+    h1
+      a href='/' =options.site_title
+
+    .hatena-body
+
+      #pager-top.calendar
+        a.prev{rel='prev' href='/?of=7'} &lt;前の7日分
+        span.delimiter |
+        a.next{rel='next' href='/?of=7'} &gt;
+
+      == yield
+
+      #pager-bottom.calendar
+        a.prev{rel='prev' href='/?of=7'} &lt;前の7日分
+        span.delimiter |
+        a.next{rel='next' href='/?of=7'} &gt;
