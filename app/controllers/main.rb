@@ -5,7 +5,9 @@ Hated.controllers do
 	end
 
 	get :day, map: '/:date' do
-		@sections = Section.all(created_on: Date.parse(params[:date]))
+		date = Date.parse(params[:date])
+		@sections = Section.all(created_on: date)
+		render :_day, locals: {date: date, sections: @sections}
 	end
 
 	get :section do
