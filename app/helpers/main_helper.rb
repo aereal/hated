@@ -1,5 +1,13 @@
 Hated.helpers do
-	# def simple_helper_method
-	#  ...
-	# end
+	def url_for_day(datetime)
+		url_for(:day, date: datetime.strftime(options.path_date_format))
+	end
+
+	def url_for_section(datetime)
+		url_for(:section, time: datetime.to_time.to_i)
+	end
+
+	def format_date(datetime)
+		datetime.strftime(options.view_date_format)
+	end
 end
