@@ -4,9 +4,9 @@ Hated is an mocking server which can be utilized for designing [Haten Diary](htt
 
 ## Installing
 
-  $ git clone git://github.com/aereal/hated.git
-  $ cd hated
-  $ bundle install
+    $ git clone git://github.com/aereal/hated.git
+    $ cd hated
+    $ bundle install
 
 ## Features
 
