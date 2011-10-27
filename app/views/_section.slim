@@ -1,0 +1,10 @@
+.section
+  h3.title
+    a(href=url_for_section(section.created_at)
+      name=section.created_at.to_time.to_i)
+      = section.title
+
+  p.sectionheader
+    span.timestamp= format_time section.created_at
+
+  == section.body
