@@ -1,1 +1,3 @@
-#days== partial :day, collection: @sections
+#days
+  - @days.each do |date, sections|
+    == partial :day, locals: {date: date, sections: sections}
