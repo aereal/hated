@@ -12,6 +12,7 @@ class Hated < Padrino::Application
 		set :header, true
 		set :path_date_format, '%Y%m%d'
 		set :view_date_format, '%Y-%m-%d'
+		set :view_time_format, '%H:%M'
 		set :site_title, 'はてなダイアリー'
 		set :title_delimiter, ' - '
 

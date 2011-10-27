@@ -10,4 +10,8 @@ Hated.helpers do
 	def format_date(datetime)
 		datetime.strftime(options.view_date_format)
 	end
+
+	def format_time(time)
+		time.strftime(options.view_time_format)
+	end
 end
