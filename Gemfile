@@ -21,6 +21,9 @@ gem 'dm-core'
 
 # Test requirements
 
+# Development requirements
+gem 'pry-padrino'
+
 # Padrino Stable Gem
 gem 'padrino', '0.10.5'
 
