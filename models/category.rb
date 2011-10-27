@@ -4,4 +4,5 @@ class Category
 	# property <name>, <type>
 	property :id, Serial
 	property :name, String
+	has n, :section, through: Resource
 end

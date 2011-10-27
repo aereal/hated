@@ -5,4 +5,5 @@ class Section
 	property :id, Serial
 	property :title, String
 	property :body, Text
+	has n, :categories, through: Resource
 end
