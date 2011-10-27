@@ -12,4 +12,4 @@
 DataMapper.logger = logger
 DataMapper::Property::String.length(255)
 
-DataMapper.setup(:default, "yaml://%s" % Padrino.root('db', "hated_#{Padrino.env}.yaml"))
+DataMapper.setup(:default, "yaml://%s" % Padrino.root('db', "hated_#{Padrino.env}"))
