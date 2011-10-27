@@ -4,7 +4,10 @@ Hated.helpers do
 	end
 
 	def url_for_section(datetime)
-		url_for(:section, time: datetime.to_time.to_i)
+		url_for(:section,
+			date: datetime.to_datetime.strftime(options.path_date_format),
+			time: datetime.to_time.to_i
+		)
 	end
 
 	def format_date(datetime)
