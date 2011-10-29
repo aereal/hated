@@ -14,6 +14,7 @@ class Hated < Padrino::Application
 		set :view_date_format, '%Y-%m-%d'
 		set :view_time_format, '%H:%M'
 		set :site_title, 'はてなダイアリー'
+		set :site_title_link?, true
 		set :title_delimiter, ' - '
 
 		Slim::Engine.set_default_options(pretty: true, format: :html4)
