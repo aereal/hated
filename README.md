@@ -8,6 +8,10 @@ Hated is an mocking server which can be utilized for designing [Haten Diary](htt
     $ cd hated
     $ bundle install
 
+## Usage
+
+    $ bundle exec padrino start
+
 ## Features
 
  * Good outlook HTML structure (written in [Slim](http://slim-lang.com))
